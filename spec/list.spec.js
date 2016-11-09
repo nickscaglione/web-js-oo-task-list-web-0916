@@ -17,11 +17,11 @@ describe('List Model', function() {
         var secondList = new List('Tristan\'s List');
         expect(list.id).toBe(0);
         expect(secondList.id).toBe(1);
-      });    
+      });
 
       it('should be assigned an empty array when a new List is created', function() {
         expect(list.tasks).toEqual([]);
-      });      
+      });
     }); // end Properties from Intialization
 
     describe('creating new list elements', function() {
@@ -37,7 +37,7 @@ describe('List Model', function() {
         expect(anotherList.listEl()).toEqual(expectedString2);
       });
 
-      it('the listEl method should create a string representing the lists\'s option', function() {
+      it('the optionEl method should create a string representing the lists\'s option', function() {
         var expectedString1 = '<option value="0">Jon\'s List</option>',
             expectedString2 = '<option value="1">Tristan\'s List</option>';
         expect(list.optionEl()).toEqual(expectedString1);
