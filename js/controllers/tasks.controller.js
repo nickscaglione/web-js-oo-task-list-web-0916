@@ -18,6 +18,11 @@ TasksController.prototype.init = function() {
 
     newTask.build()
 
+    this.$taskDescriptionInput.val('')
+    this.$taskDescriptionInput.focus()
+
+    this.$taskPriorityInput.val('')
+
     let tasks = $('#lists .list').find(`#list-${$('#select_list')[0].value}`)
     let task = tasks.find(`li[data-id=${newTask.id}]`)
 

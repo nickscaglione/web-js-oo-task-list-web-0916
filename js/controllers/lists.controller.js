@@ -18,6 +18,8 @@ ListsController.prototype.init = function() {
     let newList = new List(this.$listTitleInput[0].value)
     newList.build()
 
+    this.$listTitleInput.val('')
+
     let lists = $('#lists .list')
     lists.last().find('h2 button').click(() => {
       lists.last().remove()
